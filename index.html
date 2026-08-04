@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groetjes uit Gent</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="startScreen" class="screen active">
+
+  <div class="card">
+
+    <h1>Groetjes uit Gent</h1>
+
+    <p class="subtitle">
+      Maak je eigen digitale postkaart
+    </p>
+
+    <button id="openCameraBtn">
+      📸 Maak postkaart
+    </button>
+
+  </div>
+
+</section>
+
+<section id="cameraScreen" class="screen">
+
+  <div class="camera-wrapper">
+
+    <video id="video" autoplay playsinline></video>
+
+    <img
+      id="overlay"
+      src="assets/postcard-overlay.png"
+      alt="Overlay"
+      >
+ 
+</div>
+
+<div class="button-group">
+
+  <button id="captureBtn">
+      📸 Maak postkaart
+  </button>
+
+  <button id="switchCameraBtn">
+      🔄 Wissel camera
+  </button>
+
+</div>
+
+</section>
+
+</section>
+
+<section id="resultScreen" class="screen">
+
+  <div class="card">
+
+    <h2>Jouw postkaart</h2>
+
+    <img id="resultImage" alt="Postkaart">
+
+    <a
+      id="downloadBtn"
+      download="groetjes-uit-gent.png"
+    >
+      📥 Bewaar postkaart
+    </a>
+
+    <p class="share">
+      Deel jouw wandeling met<br>
+      <strong>#MaandvandeVoetganger</strong>
+    </p>
+
+  </div>
+
+</section>
+
+<script src="app.js"></script>
+
+</body>
+</html>
