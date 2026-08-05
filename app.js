@@ -123,3 +123,16 @@ captureBtn.addEventListener("click", () => {
 
 });
 
+const copyBtn = document.getElementById("copyHashtagsBtn");
+
+if (copyBtn) {
+  copyBtn.addEventListener("click", () => {
+
+    navigator.clipboard.writeText(
+      "#IedereenVoetganger #WandelenInGent"
+    );
+
+    copyBtn.textContent = "✅ Hashtags gekopieerd";
+
+  });
+}
