@@ -145,3 +145,9 @@ strong {
     position: relative;
     z-index: 999;
 }
+.hashtags {
+    margin: 15px 0;
+    font-weight: 600;
+    color: #1d3557;
+    text-align: center;
+}
