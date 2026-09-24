@@ -1,0 +1,199 @@
+:root {
+    --orange: #f95706;
+    --blue: #0340c7;
+    --blue-dark: #022a85;
+    --navy: #0a1a4f;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--navy);
+    background-color: var(--orange);
+    /* Spoor van voetstappen. Wil je het weg? Verwijder de volgende twee regels. */
+    background-image: url("assets/footsteps.svg");
+    background-size: 240px 240px;
+}
+
+.screen {
+    display: none;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 30px 0 14px 0;
+    color: var(--white);
+    text-shadow: 3px 3px 0 var(--navy);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+    color: var(--white);
+    text-shadow: 2px 2px 0 var(--navy);
+}
+
+.question {
+    display: inline;
+    font-size: 1em;
+}
+
+.intro {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.intro-last {
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+button,
+a {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 12px auto;
+    padding: 18px;
+
+    border: none;
+    border-radius: 18px;
+
+    background: var(--blue);
+    color: var(--white);
+    box-shadow: 0 4px 0 var(--blue-dark);
+
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:active,
+a:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 var(--blue-dark);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
+}
+
+.camera-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    aspect-ratio: 3 / 2;
+    box-shadow: 0 0 0 4px var(--white), 0 10px 24px rgba(10, 26, 79, 0.35);
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.button-group {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 15px;
+    display: block;
+    position: relative;
+    z-index: 999;
+}
+
+#captureBtn,
+#switchCameraBtn {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+}
+
+#captureBtn {
+    background: var(--white);
+    color: var(--blue);
+    border: 3px solid var(--blue);
+}
+
+#switchCameraBtn {
+    background: var(--blue);
+    color: var(--white);
+}
+
+#resultImage {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 0 4px var(--white), 0 10px 24px rgba(10, 26, 79, 0.35);
+}
+
+.share {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.hashtags {
+    display: block;
+    margin: 15px 0;
+    padding: 12px 18px;
+    border-radius: 18px;
+    background: var(--white);
+    color: var(--blue);
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button,
+    a {
+        transition: none;
+    }
+}
