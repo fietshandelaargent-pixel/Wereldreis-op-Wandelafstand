@@ -1,3 +1,11 @@
+:root {
+    --orange: #f95706;
+    --blue: #0340c7;
+    --blue-dark: #022a85;
+    --navy: #0a1a4f;
+    --white: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +14,11 @@
 
 body {
     font-family: 'Fira Sans', sans-serif;
-    background: #dcecf8;
-    color: #1d3557;
+    color: var(--navy);
+    background-color: var(--orange);
+    /* Spoor van voetstappen. Wil je het weg? Verwijder de volgende twee regels. */
+    background-image: url("assets/footsteps.svg");
+    background-size: 240px 240px;
 }
 
 .screen {
@@ -29,17 +40,41 @@ body {
 }
 
 h1 {
-    font-size: 2.4rem;
-    margin: 30px 0 10px 0;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 30px 0 14px 0;
+    color: var(--white);
+    text-shadow: 3px 3px 0 var(--navy);
 }
 
 h2 {
+    font-size: 2rem;
+    font-weight: 700;
     margin: 20px 0;
+    color: var(--white);
+    text-shadow: 2px 2px 0 var(--navy);
 }
 
-.subtitle {
-    margin-bottom: 30px;
+.question {
+    display: block;
+    font-size: 7rem;
+    line-height: 0.85;
+    margin-top: 6px;
+    transform: rotate(8deg);
+    text-shadow: 4px 4px 0 var(--navy);
+}
+
+.intro {
+    margin-bottom: 16px;
     font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.intro-last {
+    margin-bottom: 30px;
+    font-weight: 700;
 }
 
 button,
@@ -53,12 +88,29 @@ a {
     border: none;
     border-radius: 18px;
 
-    background: #1d3557;
-    color: white;
+    background: var(--blue);
+    color: var(--white);
+    box-shadow: 0 4px 0 var(--blue-dark);
 
+    font-family: inherit;
     font-size: 1.1rem;
     font-weight: 600;
     text-decoration: none;
+    cursor: pointer;
+
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:active,
+a:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 var(--blue-dark);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
 }
 
 .camera-wrapper {
@@ -69,6 +121,7 @@ a {
     overflow: hidden;
     border-radius: 20px;
     aspect-ratio: 3 / 2;
+    box-shadow: 0 0 0 4px var(--white), 0 10px 24px rgba(10, 26, 79, 0.35);
 }
 
 video {
@@ -92,47 +145,6 @@ video {
     width: 100%;
     max-width: 500px;
     margin-top: 15px;
-}
-
-#captureBtn {
-    background: white;
-    color: #1d3557;
-    border: 3px solid #1d3557;
-}
-
-#switchCameraBtn {
-    background: #1d3557;
-    color: white;
-}
-
-#resultImage {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 16px;
-    margin-bottom: 20px;
-}
-
-.share {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 1rem;
-}
-
-strong {
-    display: block;
-    margin-top: 6px;
-}
-
-strong {
-    display: block;
-    margin-top: 6px;
-}
-
-
-.button-group {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 15px;
     display: block;
     position: relative;
     z-index: 999;
@@ -145,9 +157,47 @@ strong {
     position: relative;
     z-index: 999;
 }
-.hashtags {
-    margin: 15px 0;
-    font-weight: 600;
-    color: #1d3557;
+
+#captureBtn {
+    background: var(--white);
+    color: var(--blue);
+    border: 3px solid var(--blue);
+}
+
+#switchCameraBtn {
+    background: var(--blue);
+    color: var(--white);
+}
+
+#resultImage {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 0 4px var(--white), 0 10px 24px rgba(10, 26, 79, 0.35);
+}
+
+.share {
+    margin-top: 20px;
     text-align: center;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.hashtags {
+    display: block;
+    margin: 15px 0;
+    padding: 12px 18px;
+    border-radius: 18px;
+    background: var(--white);
+    color: var(--blue);
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button,
+    a {
+        transition: none;
+    }
 }

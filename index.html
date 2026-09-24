@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f95706">
   <title>Groetjes uit Gent</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,10 +16,21 @@
 
   <div class="card">
 
-    <h1>Groetjes uit Gent</h1>
+    <h1>Groetjes uit Gent<span class="question">?</span></h1>
 
-    <p class="subtitle">
-      Maak je eigen digitale postkaart
+    <p class="intro">
+      Vandaag maak jij een wereldreis op wandelafstand,
+      want tijdens de Maand van de Voetganger liggen verre bestemmingen
+      plots verrassend dichtbij.
+    </p>
+
+    <p class="intro">
+      En zelfs de kortste vakantie verdient een postkaartje voor het thuisfront.
+    </p>
+
+    <p class="intro intro-last">
+      Stuur hier je vakantiegroetjes digitaal op.
+      Kunnen ze thuis raden waar je bent?
     </p>
 
     <button id="openCameraBtn">
@@ -39,23 +51,21 @@
       id="overlay"
       src="assets/postcard-overlay.png"
       alt="Overlay"
-      >
- 
-</div>
+    >
 
-<div class="button-group">
+  </div>
 
-  <button id="captureBtn">
+  <div class="button-group">
+
+    <button id="captureBtn">
       📸 Maak postkaart
-  </button>
+    </button>
 
-  <button id="switchCameraBtn">
+    <button id="switchCameraBtn">
       🔄 Wissel camera
-  </button>
+    </button>
 
-</div>
-
-</section>
+  </div>
 
 </section>
 
@@ -74,18 +84,18 @@
       📥 Bewaar postkaart
     </a>
 
-   <p class="share">
-  Deel jouw wandeling op jouw social media met
-</p>
+    <p class="share">
+      Deel jouw wandeling op jouw social media met
+    </p>
 
-<p class="hashtags">
-  #IedereenVoetganger
-  #WandelenInGent
-</p>
+    <p class="hashtags">
+      #IedereenVoetganger
+      #WandelenInGent
+    </p>
 
-<button id="copyHashtagsBtn">
-  📋 Kopieer hashtags
-</button>
+    <button id="copyHashtagsBtn">
+      📋 Kopieer hashtags
+    </button>
 
   </div>
 
