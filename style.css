@@ -16,6 +16,7 @@ body {
     font-family: 'Fira Sans', sans-serif;
     color: var(--navy);
     background-color: var(--orange);
+    overflow-x: hidden;
     /* Spoor van voetstappen. Wil je het weg? Verwijder de volgende twee regels. */
     background-image: url("assets/footsteps.svg");
     background-size: 240px 240px;
@@ -40,12 +41,13 @@ body {
 }
 
 h1 {
-    font-size: 2.6rem;
+    font-size: clamp(1.5rem, 7.8vw, 2.6rem);
     font-weight: 700;
     line-height: 1.1;
     margin: 30px 0 14px 0;
     color: var(--white);
     text-shadow: 3px 3px 0 var(--navy);
+    white-space: nowrap;
 }
 
 h2 {
