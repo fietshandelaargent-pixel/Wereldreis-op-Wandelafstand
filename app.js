@@ -129,7 +129,7 @@ if (copyBtn) {
   copyBtn.addEventListener("click", () => {
 
     navigator.clipboard.writeText(
-      "#IedereenVoetganger #WandelenInGent"
+      "#IedereenVoetganger #WandelenInGent #MaandVanDeVoetganger"
     );
 
     copyBtn.textContent = "✅ Hashtags gekopieerd";

@@ -57,12 +57,8 @@ h2 {
 }
 
 .question {
-    display: block;
-    font-size: 7rem;
-    line-height: 0.85;
-    margin-top: 6px;
-    transform: rotate(8deg);
-    text-shadow: 4px 4px 0 var(--navy);
+    display: inline;
+    font-size: 1em;
 }
 
 .intro {
