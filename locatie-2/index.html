@@ -8,9 +8,9 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body data-locatie="locatie-2">
 
 <section id="startScreen" class="screen active">
 
@@ -31,6 +31,11 @@
     <button id="openCameraBtn">
       📸 Maak postkaart
     </button>
+
+    <p id="cameraError" class="error" hidden>
+      We krijgen geen toegang tot je camera. Sta camera-toegang toe in je
+      instellingen, of open deze pagina in Safari of Chrome.
+    </p>
 
   </div>
 
@@ -72,12 +77,24 @@
 
     <img id="resultImage" alt="Postkaart">
 
+    <button id="shareBtn">
+      📤 Deel je postkaart
+    </button>
+
     <a
       id="downloadBtn"
       download="groetjes-uit-gent.png"
     >
       📥 Bewaar postkaart
     </a>
+
+    <button id="retakeBtn">
+      🔄 Nieuwe foto
+    </button>
+
+    <p id="shareHint" class="hint" hidden>
+      Tip: de hashtags zijn gekopieerd. Plak ze in je bericht!
+    </p>
 
     <p class="share">
       Deel jouw wandeling op jouw social media met
@@ -93,11 +110,16 @@
       📋 Kopieer hashtags
     </button>
 
+    <p id="moreWalks" class="more" hidden>
+      Ontdek onze andere wandelingen op<br>
+      <a id="moreWalksLink" href="#"></a>
+    </p>
+
   </div>
 
 </section>
 
-<script src="app.js"></script>
+<script src="../app.js"></script>
 
 </body>
 </html>

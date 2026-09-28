@@ -199,3 +199,46 @@ video {
         transition: none;
     }
 }
+
+[hidden] {
+    display: none !important;
+}
+
+.error {
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: var(--white);
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.hint {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.more {
+    margin-top: 28px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.more a {
+    display: inline;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: underline;
+    text-shadow: 1px 1px 0 var(--navy);
+}
