@@ -9,7 +9,7 @@ const GOATCOUNTER_CODE = "";
 // Link naar jullie website met de andere wereldreis-wandelingen.
 // Leeg laten = het zinnetje onderaan wordt niet getoond.
 // Voorbeeld: "https://www.mijnwebsite.be"
-const MEER_WANDELINGEN_URL = "https://www.stadgent/lateraanvullen.be";
+const MEER_WANDELINGEN_URL = "https://data.stad.gent/explore/assets/maand-van-de-voetganger-wandelingen/";
 
 const HASHTAGS = "#IedereenVoetganger #WandelenInGent #MaandVanDeVoetganger";
 
